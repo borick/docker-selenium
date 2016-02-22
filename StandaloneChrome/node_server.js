@@ -16,7 +16,6 @@ function handleRequest (request, response) {
       console.log(error)
     }
   }
-  exec('pkill -9 chromedriver', puts) // kill ze chromedrivers
   exec('pkill -9 -f \'test-type=webdriver\'', puts) // kill ze chromes!
 }
 
