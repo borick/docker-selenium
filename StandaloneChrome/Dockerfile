@@ -1,5 +1,5 @@
-FROM selenium/node-chrome:2.52.0
-MAINTAINER Selenium <selenium-developers@googlegroups.com>
+FROM borick/nodechrome:latest
+MAINTAINER Boris Sitsker
 
 USER root
 
