@@ -40,6 +40,7 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
 # Server script in background
 #=============================
 COPY node_server.js /opt/bin/node_server.js
+RUN node /opt/bin/node_server.js &
 
 #====================================
 # Scripts to run Selenium Standalone
@@ -49,6 +50,4 @@ RUN chmod +x /opt/bin/entry_point.sh
 
 USER seluser
 
-EXPOSE 4444 3666
-
-CMD node "/opt/bin/node_server.js" & "/opt/bin/entry_point.sh"
+EXPOSE 4444
